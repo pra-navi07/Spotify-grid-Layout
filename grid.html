@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid Layout</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        width: 100vw;
+        height: 100vh;
+        background: #000000;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #434343, #e7dddd); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+        /* background-color: #1db954; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+        .boxes{    
+          display: grid;
+        grid-template-columns: 250px 250px 250px 250px;
+        grid-template-rows: 200px 200px 200px;
+        /* border-radius: 15px; */
+      }
+      .box {
+        background-color: black;
+        margin: 10px;
+        border-radius: 15px;
+      }
+      .box1 {
+        grid-area: 1/1/2/4;
+        /* background-color: rgba(18, 173, 83, 0.877); */
+        background-color: #1db954;
+      }
+      .box2 {
+        grid-area: 1/4/4/5;
+        background-image: url(ts.png);
+        background-size: cover;
+      }
+      .box3 {
+        grid-area: 2/1/4/2;
+      }
+      .box4 {
+        grid-area: 2/2/3/3;
+        background-image: url(ed1.png);
+        background-size: cover;
+      }
+      .box5 {
+        grid-area: 2/3/3/4;
+        background-color: black;
+      }
+      .box6 {
+        grid-area: 3/2/4/4;
+        background-image: url(aj.png);
+        background-size: cover;
+      }
+      .i3 {
+        margin-top: 65px;
+        padding: 20px;
+        margin-left: 6px;
+      }
+      .head1 {
+        padding: 25px;
+        margin: 10px;
+        margin-left: 17px;
+        font-size: 45px;
+      }
+      .head5 {
+        color: #1db954;
+        padding: 20px;
+        font-size: 35px;
+      }
+      .head6 {
+        color: rgba(255, 255, 255, 0.87);
+        font-size: 25px;
+        padding: 15px;
+      }
+      .head4 {
+        color: rgba(255, 255, 255, 0.87);
+        font-size: 25px;
+        margin-top: 120px;
+        margin-left: 75px;
+        padding: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="boxes">
+        <div class="box box1">
+          <h1 class="head1">Spotify's most-followed Artists (February 2025)</h1>
+        </div>
+        <div class="box box2">
+          <h3 class="head6">Taylor Swift</h3>
+        </div>
+        <div class="box box3">
+          <div class="b3">
+            <img src="bb1.png" alt="" width="220px" class="i3" />
+          </div>
+        </div>
+        <div class="box box4">
+          <h3 class="head4">Ed Sheeran</h3>
+        </div>
+        <div class="box box5">
+          <h1 class="head5">Top 3 Artists of the Decade.</h1>
+        </div>
+        <div class="box box6">
+          <h3 class="head6">Arijit Singh</h3>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
